@@ -1,0 +1,43 @@
+<import src="../../../common/head.ttml" />
+<import src="../../../common/foot.ttml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'tabBar'}}"/>
+  <view class="page-body">
+    <view class="btn-area">
+      <button bindtap="setTabBarBadge">
+        {{ !hasSetTabBarBadge ? tab_icon : remove_icon }}
+      </button>
+      <button bindtap="showTabBarRedDot">
+        {{ !hasShownTabBarRedDot ? show_dot  : remove_dot}}
+      </button>
+      <button bindtap="customStyle">
+        {{ !hasCustomedStyle ? custom_style : remove_custom_style}}
+      </button>
+      <button bindtap="customStyleShowTitle">
+        {{show_text}}
+      </button>
+      <button bindtap="customStyleShowIcon">
+        {{show_icon_and_selectedIcon}}
+      </button>
+      <button bindtap="customStyleShowIcon">
+        {{show_icon}}
+      </button>
+      <button bindtap="customStyleShowSelectedIcon">
+        {{show_selectedIcon}}
+      </button>
+      <button bindtap="customItem">
+        {{ !hasCustomedItem ? custom_tab_info : remove_tab_info }}
+      </button>
+      <button bindtap="hideTabBar">
+        {{ !hasHiddenTabBar ? hide_tab_bar : show_tab_bar }}
+      </button>
+    </view>
+
+    <view class="btn-area">
+      <button type="primary" bindtap="navigateBack">{{back}}</button>
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>

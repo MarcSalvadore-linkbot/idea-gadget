@@ -1,0 +1,44 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Dashboard",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color": "#646A73",
+    "selectedColor": "#4b49ac",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+    {
+      "pagePath": "page/index/index",
+      "text": "Main"
+    },
+    {
+      "pagePath": "page/src/menu/index",
+      "text": "Idea"
+    },
+    {
+      "pagePath": "page/component/index",
+      "text": "Activity Log"
+    }
+    ]
+  },
+  "ext": {
+    "defaultPages": {
+      "sidebarMode": "page/src/index",
+      "PCMode": "page/src/index"
+    }
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

@@ -1,0 +1,6 @@
+@import "../../../common/lib/weui.ttss";
+@import "../../../../app.ttss";
+
+.weui-label {
+  width: 5em;
+}

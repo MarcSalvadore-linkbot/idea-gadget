@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity Log</title>
+</head>
+<body>
+  <h1>Activity Log</h1>
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" required>
+    <label for="status">Status:</label>
+    <input type="text" id="status" required>
+    <button onclick="addLog()">Add Log</button>
+  </div>
+  <ul id="activityLog"></ul>
+
+  <script>
+    // Array to store activity log entries
+    const activityLogs = [];
+
+    // Function to add a log entry
+    function addLog() {
+      const name = document.getElementById('name').value;
+      const contact = document.getElementById('contact').value;
+      const status = document.getElementById('status').value;
+      const date = new Date().toLocaleString(); // Get current date and time
+
+      if (name && contact && status) {
+        // Create a new log entry
+        const logEntry = { name, contact, date, status };
+        activityLogs.push(logEntry);
+
+        // Clear the input fields
+        document.getElementById('name').value = '';
+        document.getElementById('contact').value = '';
+        document.getElementById('status').value = '';
+
+        // Update the displayed log
+        displayLogs();
+      } else {
+        alert('Please enter Name, Contact, and Status.');
+      }
+    }
+
+    // Function to display all logs
+    function displayLogs() {
+      const activityLogElement = document.getElementById('activityLog');
+      activityLogElement.innerHTML = ''; // Clear previous logs
+
+      // Render each log entry as a list item
+      activityLogs.forEach((log, index) => {
+        const logItem = document.createElement('li');
+        logItem.textContent = `Name: ${log.name}, Contact: ${log.contact}, Date: ${log.date}, Status: ${log.status}`;
+        activityLogElement.appendChild(logItem);
+      });
+    }
+  </script>
+</body>
+</html>

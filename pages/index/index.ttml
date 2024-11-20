@@ -1,0 +1,43 @@
+<view class="flex flex-col min-h-screen">
+
+  <view class="flex-1 p-4 bg-neutral">
+    <!-- Flex container for Welcome and Cards -->
+    <view class="flex flex-col md:flex-row gap-4">
+  
+      <!-- Card Grid -->
+      <view class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-1-2">
+        <view class="bg-idea text-dark p-4 rounded-3xl shadow-md">
+          <view class="text-sm font-normal">Total Records</view>
+          <view class="text-3xl font-semibold mt-4">{{totalRecords}}</view>
+          <view class="text-sm">Number of Ideas Submitted to the Gadget</view>
+        </view>
+      </view>
+
+      <button class="create-button">
+        <span class="icon">+</span> Add Record
+      </button>
+      
+      <!-- Record List Grid -->
+      <view class="activity-log">
+        <block wx:for="{{activityLog}}" wx:key="id">
+          <view class="log-entry p-4 rounded-3xl shadow-md">
+            <text class="log-name">Name: {{item.name}}</text>
+            <text class="log-attempts">Attempts: {{item.attempts}}</text>
+            <text class="log-status">Status: {{item.status}}</text>
+            <text class="log-text">Text: {{item.text}}</text>
+            <text class="log-text">Record Id: {{item.record_id}}</text>
+            <!-- Delete Button -->
+            <button data-id="{{item.record_id}}" bindtap="deleteRecord" class="delete-button">Delete</button>
+          </view>
+        </block>
+      </view>
+  
+    </view>
+  </view>
+  
+
+  <!-- Footer -->
+  <view class="bg-dark text-md text-white text-center p-2">
+    <text>©2024 Linkbot</text>
+  </view>
+</view>
