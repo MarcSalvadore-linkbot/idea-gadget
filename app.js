@@ -8,8 +8,12 @@ App({
 
     //check if auth token exist on first app load
     try {
-      const token = await checkToken(); //check for token in storage
-      console.log('Auth Token:', token);
+      console.log("Attempting to log in and retrieve token...");
+      const token = await login(); // Directly invoke login to get the token
+
+      // Check if the token is saved properly
+      const validatedToken = checkToken(); // No need for `await` since token is already saved
+      console.log('Validated Token:', validatedToken);
       //set the global data with token if it exists
       this.globalData.hasLogin = true;
       this.globalData.token = token;

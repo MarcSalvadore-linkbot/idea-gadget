@@ -1,0 +1,63 @@
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.bg-neutral {
+  background-color: #f9f9f9;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.title {
+  text-align: center; /* Centers the text horizontally */
+  font-size: 1.5rem;  /* Adjust the font size */
+  font-weight: 600;   /* Makes the text bold */
+  margin-bottom: 1rem; /* Adds space below the title */
+}
+
+.input,
+.textarea {
+  width: 90%;
+  padding: 0.5rem;
+  border: 3px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.textarea {
+  height: 4rem;
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 5px 20px; /* Adjust padding for better size */
+  background-color: #4CAF50; /* Green background for the "Create" button */
+  border: 2px solid #388E3C; /* Border color */
+  transition: background-color 0.3s ease, transform 0.2s; 
+}
+
+.submit-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05); /* Slight scale-up effect on hover */
+}

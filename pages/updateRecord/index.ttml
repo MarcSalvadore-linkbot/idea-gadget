@@ -1,0 +1,47 @@
+<view class="flex flex-col min-h-screen p-4 bg-neutral">
+  <view class="title">Update Record</view>
+  
+  <!-- Input for Name -->
+  <view class="mb-4">
+    <label class="block text-lg font-medium mb-2" for="name">Name</label>
+    <input 
+      id="name" 
+      type="text" 
+      placeholder="Enter Name" 
+      class="input" 
+      bindinput="handleInput" 
+      data-field="name"
+      value="{{name}}"
+    />
+  </view>
+  
+  <!-- Input for Attempts -->
+  <view class="mb-4">
+    <label class="block text-lg font-medium mb-2" for="attempts">Attempts</label>
+    <input 
+      id="attempts" 
+      type="number" 
+      placeholder="Enter Your Attempt Made" 
+      class="input" 
+      bindinput="handleInput" 
+      data-field="attempts"
+      value="{{attempts}}"
+    />
+  </view>
+
+  <!-- Input for Text -->
+  <view class="mb-4">
+    <label class="block text-lg font-medium mb-2" for="text">Text</label>
+    <textarea 
+      id="text" 
+      placeholder="Enter Your Idea Here" 
+      class="textarea" 
+      bindinput="handleInput" 
+      data-field="text"
+      value="{{text}}"
+    ></textarea>
+  </view>
+
+  <!-- Submit Button -->
+  <button class="submit-button" bindtap="submitRecord">Submit</button>
+</view>

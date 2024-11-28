@@ -13,7 +13,7 @@
         </view>
       </view>
 
-      <button class="create-button">
+      <button class="create-button" bindtap="navigateToAddRecord">
         <span class="icon">+</span> Add Record
       </button>
       
@@ -28,6 +28,7 @@
             <text class="log-text">Record Id: {{item.record_id}}</text>
             <!-- Delete Button -->
             <button data-id="{{item.record_id}}" bindtap="deleteRecord" class="delete-button">Delete</button>
+            <button data-id="{{item.record_id}}" bindtap="navigateToUpdateRecord" class="update-button">Update</button>
           </view>
         </block>
       </view>

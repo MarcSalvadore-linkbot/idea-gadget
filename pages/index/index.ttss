@@ -2,9 +2,9 @@
   padding: 20px;
 }
 .log-entry {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   padding: 16px;
-  background-color: #0993d3;
+  background-color: #19a5e6;
   border-radius: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -31,6 +31,23 @@
 .delete-button:hover {
   background-color: rgb(200, 30, 30); 
   transform: scale(1.05); 
+}
+
+.update-button {
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 4px 12px;
+  background-color: rgb(255, 255, 255); 
+  border: 1px solid black; 
+  transition: background-color 0.3s ease, transform 0.2s; 
+}
+
+.update-button:hover {
+  background-color: lightgray;
+  transform: scale(1.05);
 }
 
 .create-button {

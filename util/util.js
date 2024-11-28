@@ -20,7 +20,7 @@ const saveAuthToken = (token) => {
 const login = async () => {
   return new Promise ((resolve, reject) => {
     tt.request({
-      url: "https://open.larksuite.com/open-apis/auth/v3/tenant_access_token/internal",
+      url: "https://open.larksuite.com/open-apis/auth/v3/app_access_token/internal",
       header: {
         'content-type' : 'application/json'
       },
@@ -57,7 +57,6 @@ const checkToken = async () => {
     //if no token is found, log in and get a new token
     return await login();
   }
-  console.log("Token found:", token);
   //if token exist, return it
   return token;
 };
