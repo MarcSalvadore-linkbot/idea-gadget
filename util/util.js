@@ -9,11 +9,7 @@ const getAuthToken = () => {
 const saveAuthToken = (token) => {
   console.log("Saving token...");
 
-  const tokenData = {
-    token
-  };
-
-  tt.setStorageSync('authToken', JSON.stringify(tokenData)); //save
+  tt.setStorageSync('authToken', token); //save
   console.log('Token successfully saved');
 };
 
