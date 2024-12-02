@@ -26,6 +26,7 @@
 
 .flex {
   display: flex;
+  flex-direction: column;
 }
 
 .inline-flex {
@@ -2114,6 +2115,10 @@ hr {
 /* Color Classes */
 .bg-idea {
   background-color: #ffb73c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .bg-secondary {

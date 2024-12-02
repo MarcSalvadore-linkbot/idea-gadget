@@ -53,12 +53,14 @@
 .create-button {
   display: flex;
   align-items: center;
+  align-self: flex-start;
   justify-content: center;
   font-size: 16px;
   color: white;
   font-weight: bold;
   cursor: pointer;
   border-radius: 16px;
+  margin: 60px;
   padding: 5px 20px; /* Adjust padding for better size */
   background-color: #4CAF50; /* Green background for the "Create" button */
   border: 2px solid #388E3C; /* Border color */
@@ -73,4 +75,10 @@
 .icon {
   font-size: 24px; /* Icon size */
   margin-right: 8px; /* Space between icon and text */
+}
+
+.page-container {
+  max-width: 1200px; /* Limit content width on larger screens */
+  margin: 0 auto;    /* Center the content */
+  padding: 1rem;     /* Add padding around the container */
 }

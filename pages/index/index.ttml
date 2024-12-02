@@ -1,24 +1,22 @@
 <view class="flex flex-col min-h-screen">
 
-  <view class="flex-1 p-4 bg-neutral">
+  <view class="flex-1 p-4 bg-neutral page-container">
     <!-- Flex container for Welcome and Cards -->
     <view class="flex flex-col md:flex-row gap-4">
-  
-      <!-- Card Grid -->
-      <view class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-1-2">
-        <view class="bg-idea text-dark p-4 rounded-3xl shadow-md">
-          <view class="text-sm font-normal">Total Records</view>
-          <view class="text-3xl font-semibold mt-4">{{totalRecords}}</view>
-          <view class="text-sm">Number of Ideas Submitted to the Gadget</view>
-        </view>
-      </view>
 
-      <button class="create-button" bindtap="navigateToAddRecord">
-        <span class="icon">+</span> Add Record
-      </button>
-      
-      <!-- Record List Grid -->
       <view class="activity-log">
+        <!-- Card Grid -->
+        <view class="bg-idea text-dark p-4 rounded-3xl shadow-md">
+          <view class="text-md font-normal">Total Records</view>
+          <view class="text-3xl font-semibold mt-4">{{totalRecords}}</view>
+          <view class="text-md">Number of Ideas Submitted</view>
+        </view>
+
+        <button class="create-button" bindtap="navigateToAddRecord">
+          <span class="icon">+</span> Add Record
+        </button>
+        
+        <!-- Record List Grid -->
         <block wx:for="{{activityLog}}" wx:key="id">
           <view class="log-entry p-4 rounded-3xl shadow-md">
             <text class="log-name">Name: {{item.name}}</text>
@@ -32,7 +30,6 @@
           </view>
         </block>
       </view>
-  
     </view>
   </view>
   

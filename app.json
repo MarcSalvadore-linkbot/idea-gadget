@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/index/activityLog/index",
     "pages/addRecord/index",
     "pages/updateRecord/index"
   ],
