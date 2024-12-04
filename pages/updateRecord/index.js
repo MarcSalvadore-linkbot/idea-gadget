@@ -5,7 +5,6 @@ const eventEmitter = require('../../util/events');
 const { getAuthToken } = require('../../util/util');
 
 const tokenData = getAuthToken();
-const tokenValue = JSON.parse(tokenData).token;
 
 Page({
   data: {
@@ -62,7 +61,7 @@ Page({
       url: `https://open.larksuite.com/open-apis/bitable/v1/apps/LAJOb2ldbayRZxsVkg8lLjXugie/tables/tblKCbqgoxD8H5UW/records/batch_update`, // Use the batch_update endpoint
       method: 'POST',
       header: {
-        'Authorization': `Bearer ${tokenValue}`,
+        'Authorization': `Bearer ${tokenData}`,
         'Content-Type': 'application/json; charset=utf-8',
       },
       data: dataPayload,

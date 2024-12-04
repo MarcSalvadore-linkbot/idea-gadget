@@ -1,4 +1,12 @@
 <view class="flex flex-col min-h-screen">
+  <!-- Header -->
+  <view class="bg-white shadow-md p-3 flex-row items-center justify-center">
+    <image
+      class="w-10 h-10 mr-2 mt-7"
+      src="../../image/linkbot-icon.png"
+    />
+    <text class="text-xl font-bold text-info">Linkbot Gadget</text>
+  </view>
 
   <view class="flex-1 p-4 bg-neutral page-container">
     <!-- Flex container for Welcome and Cards -->
@@ -7,9 +15,9 @@
       <view class="activity-log">
         <!-- Card Grid -->
         <view class="bg-idea text-dark p-4 rounded-3xl shadow-md">
-          <view class="text-md font-normal">Total Records</view>
-          <view class="text-3xl font-semibold mt-4">{{totalRecords}}</view>
-          <view class="text-md">Number of Ideas Submitted</view>
+          <view class="text-md font-semibold">Total Records</view>
+          <view class="text-4xl font-bold mt-4">{{totalRecords}}</view>
+          <view class="text-md font-semibold">Number of Ideas Submitted</view>
         </view>
 
         <button class="create-button" bindtap="navigateToAddRecord">
@@ -19,11 +27,11 @@
         <!-- Record List Grid -->
         <block wx:for="{{activityLog}}" wx:key="id">
           <view class="log-entry p-4 rounded-3xl shadow-md">
-            <text class="log-name">Name: {{item.name}}</text>
-            <text class="log-attempts">Attempts: {{item.attempts}}</text>
-            <text class="log-status">Status: {{item.status}}</text>
-            <text class="log-text">Text: {{item.text}}</text>
-            <text class="log-text">Record Id: {{item.record_id}}</text>
+            <text class="log-name font-semibold text-margin">Name: {{item.name}}</text>
+            <text class="log-attempts font-semibold text-margin">Attempts: {{item.attempts}}</text>
+            <text class="log-status font-semibold text-margin">Status: {{item.status}}</text>
+            <text class="log-text font-semibold text-margin">Text: {{item.text}}</text>
+            <text class="log-text font-semibold text-margin-last">Record Id: {{item.record_id}}</text>
             <!-- Delete Button -->
             <button data-id="{{item.record_id}}" bindtap="deleteRecord" class="delete-button">Delete</button>
             <button data-id="{{item.record_id}}" bindtap="navigateToUpdateRecord" class="update-button">Update</button>
