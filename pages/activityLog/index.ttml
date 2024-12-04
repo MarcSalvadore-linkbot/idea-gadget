@@ -1,0 +1,38 @@
+<view class="flex flex-col min-h-screen">
+  <view class="flex-1 p-4 bg-neutral">
+    <!-- Flex container for Welcome and Cards -->
+    <view class="flex flex-col md:flex-row gap-4">
+      
+      <view class="activity-log">
+        <!-- Record List Grid -->
+        <!-- Grouped Record List Grid -->
+        <!-- <block wx:for="{{groupedLogs}}" wx:key="day">
+          <view class="log-group p-4 rounded-3xl shadow-md mb-4">
+            <text class="log-date font-semibold text-margin">{{item.day}}</text> <!-- Display the formatted date -->
+
+            <!-- <block wx:for="{{item.logs}}" wx:key="id">
+              <view class="log-entry p-4 rounded-3xl shadow-md mb-2">
+                <text class="log-name font-semibold text-margin">Name: {{item.name}}</text>
+                <text class="log-action font-semibold text-margin">Action: {{item.action}}</text>
+                <text class="log-id font-semibold text-margin-last">Record Id: {{item.record_id}}</text>
+              </view>
+            </block>
+          </view> -->
+        <!-- </block> -->
+        <block wx:for="{{activityLog}}" wx:key="id">
+          <view class="log-entry p-4 rounded-3xl shadow-md mb-4">
+            <text class="log-name font-semibold">Name: {{item.name}}</text>
+            <text class="log-date font-semibold">Date: {{item.date}}</text>
+            <text class="log-action font-semibold">Action: {{item.action}}</text>
+            <!-- <text class="log-id font-semibold">Record Id: {{item.record_id}}</text> -->
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <!-- Footer -->
+  <view class="bg-dark text-md text-white text-center p-2">
+    <text>©2024 Linkbot</text>
+  </view>
+</view>

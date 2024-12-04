@@ -1,0 +1,23 @@
+@import "/lib/styles/bootstrap.min.ttss";
+
+.log-group {
+  background-color: #f0f0f0; 
+  border-radius: 16px;       /* Rounded corners for the group container */
+  padding: 20px;            /* Space inside the group container */
+  margin-bottom: 20px;      /* Space between log groups */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.log-entry {
+  background-color: #7da0fa;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.log-name, 
+.log-date, 
+.log-action, 
+.log-id {
+  display: block;
+  font-size: 16px;
+}
